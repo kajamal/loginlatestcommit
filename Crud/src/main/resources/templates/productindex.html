@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Product List</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h2>List of Products</h2>
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Image</th>
+  </tr>
+  <tr th:each="product : ${products}">
+    <td th:text="${product.productname}">Product Name</td>
+    <td th:text="${product.description}">Description</td>
+    <td th:text="${product.price}">Price</td>
+    <td th:text="${product.category}">Category</td>
+    <td> <!-- You can include an image column here if needed -->
+    </td>
+  </tr>
+</table>
+</body>
+</html>

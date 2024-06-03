@@ -1,0 +1,90 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Create Product</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            text-align: center;-->
+<!--            background-color: #f0f0f0;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            color: #333;-->
+<!--        }-->
+<!--        form {-->
+<!--            max-width: 400px;-->
+<!--            margin: 0 auto;-->
+<!--            padding: 20px;-->
+<!--            background-color: #fff;-->
+<!--            border: 1px solid #ddd;-->
+<!--            border-radius: 5px;-->
+<!--            box-shadow: 0px 0px 10px #ddd;-->
+<!--        }-->
+<!--        label {-->
+<!--            display: block;-->
+<!--            text-align: left;-->
+<!--            margin: 10px 0;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+<!--        input[type="text"],-->
+<!--        input[type="number"],-->
+<!--        textarea {-->
+<!--            width: 100%;-->
+<!--            padding: 10px;-->
+<!--            margin: 5px 0;-->
+<!--            border: 1px solid #ccc;-->
+<!--            border-radius: 3px;-->
+<!--        }-->
+<!--        textarea {-->
+<!--            resize: vertical;-->
+<!--        }-->
+<!--        input[type="file"] {-->
+<!--            width: 100%;-->
+<!--        }-->
+<!--        button[type="submit"] {-->
+<!--            background-color: #007BFF;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            border-radius: 3px;-->
+<!--            padding: 10px 20px;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Create Product</h1>-->
+<!--<form method="post" action="/admin/products/create" enctype="multipart/form-data">-->
+<!--    <label for="productName">Product Name:</label>-->
+<!--    <input type="text" id="productName" name="productName" required>-->
+
+<!--    <label for="productDescription">Description:</label>-->
+<!--    <textarea id="productDescription" name="productDescription" required></textarea>-->
+
+<!--    <label for="productPrice">Price:</label>-->
+<!--    <input type="number" id="productPrice" name="productPrice" required>-->
+
+<!--    <label for="productCategory">Category:</label>-->
+<!--    <input type="text" id="productCategory" name="productCategory" required>-->
+
+<!--    <label for="productImage">Product Image:</label>-->
+<!--    <input type="file" id="productImage" name="productImage" accept="image/*">-->
+
+<!--    <button type="submit">Create Product</button>-->
+<!--</form>-->
+
+
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+<h1>Product List</h1>
+    <form th:action="@{/products}" method="get">
+    <button type="submit">Show Products</button>
+</form>
+</body>
+</html>
